@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator app</title>
-    <link rel="stylesheet" href="index.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      integrity="sha512-..."
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <div class="content-dp">
-        <div class="user-info">
-          <h1 id="greeting">Smart calculator</h1>
-          <p class>Get started with our calculator now!</p>
-          <button class="click-btn">
-            <a href="calculator.html">Click here</a>
-          </button>
-        </div>
-        <div class="image">
-          <img src="undraw_calculator_re_alsc.svg" alt="" />
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator app</title>
+  <!-- <link rel="stylesheet" href="index.css" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          backgroundImage: {
+            'background': 'linear-gradient(135deg, rgb(219, 144, 5) 0%, rgb(220, 220, 226) 50%, rgba(127, 127, 134, 0.562) 100%)',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="flex justify-center items-center bg-background h-lvh w-full">
+    <div class="flex flex-col lg:flex-row justify-center items-center">
+      <div class="text-center mb-6 lg:mb-0">
+        <h1 class="text-3xl font-semibold">Smart calculator</h1>
+        <p class="my-2 md:mb-6 text-2xl">Get started with our calculator now!</p>
+
+          <a class="text-white bg-black py-2 px-6 rounded-3xl text-md md:text-xl" href="calculator.html">Click here</a>
       </div>
+        <img  src="undraw_calculator_re_alsc.svg" alt="" />
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
