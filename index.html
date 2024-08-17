@@ -3,92 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
-    <link rel="stylesheet" href="index.css" />
+    <title>Calculator app</title>
+    <link rel="stylesheet" href="intro.css" />
   </head>
   <body>
     <div class="container">
-      <div class="calculator">
-        <form>
-          <div class="display">
-            <input type="text" name="display" />
-          </div>
-          <div>
-            <input
-              type="button"
-              value="C"
-              class="highlight"
-              onclick="display.value = ''"
-            />
-            <input
-              type="button"
-              value="DE"
-              onclick="display.value= display.value.toString().slice(0, -1)"
-              class="highlight"
-            />
-            <input
-              type="button"
-              value="%"
-              onclick="display.value+= '%' "
-              class="highlight"
-            />
-            <input
-              type="button"
-              value="/"
-              onclick="display.value+= '/' "
-              class="operator"
-            />
-          </div>
-          <div>
-            <input type="button" value="7" onclick="display.value+= '7' " />
-            <input type="button" value="8" onclick="display.value+= '8' " />
-            <input type="button" value="9" onclick="display.value+= '9' " />
-            <input
-              type="button"
-              value="X"
-              onclick="display.value+= ' * ' "
-              class="operator"
-            />
-          </div>
-          <div>
-            <input type="button" value="4" onclick="display.value+= '4' " />
-            <input type="button" value="5" onclick="display.value+= '5' " />
-            <input type="button" value="6" onclick="display.value+= '6' " />
-            <input
-              type="button"
-              value="-"
-              onclick="display.value += '-' "
-              class="operator"
-            />
-          </div>
-          <div>
-            <input type="button" value="1" onclick="display.value+= '1' " />
-            <input type="button" value="2" onclick="display.value+= '2' " />
-            <input type="button" value="3" onclick="display.value+= '3' " />
-            <input
-              type="button"
-              value="+"
-              onclick="display.value+= '+' "
-              class="operator"
-            />
-          </div>
-          <div>
-            <input
-              type="button"
-              value="0"
-              onclick="display.value+= '0' "
-              class="zero"
-            />
-            <input type="button" value="." onclick="display.value += '.' " />
-            <input
-              type="button"
-              value="="
-              onclick="display.value = eval(display.value) "
-              class="operator"
-            />
-          </div>
-        </form>
+      <!-- <header>
+        <h1>SmartCalc</h1>
+        <p>Your go-to online calculator for all your needs</p>
+      </header> -->
+      <div class="content-dp">
+        <div class="user-info">
+          <h1 id="greeting">Hello Samuel</h1>
+          <p class>Get started with our calculator now!</p>
+          <button class="click-btn">
+            <a href="index.html">Click here</a>
+          </button>
+        </div>
+        <div class="image">
+          <img src="undraw_calculator_re_alsc.svg" alt="" />
+        </div>
       </div>
     </div>
+    <script>
+      function askUserName() {
+        const userName = prompt("Please enter your name:");
+
+        if (userName) {
+          document.getElementById(
+            "greeting"
+          ).textContent = `Hello, ${userName}! Welcome to our website.`;
+        } else {
+          document.getElementById("greeting").textContent =
+            "Hello! Welcome to our website.";
+        }
+      }
+
+      window.onload = askUserName;
+    </script>
   </body>
 </html>

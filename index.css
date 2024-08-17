@@ -5,83 +5,67 @@
 
 .container{
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background: rgb(220, 220, 226);
-}
-.calculator{
-  background: rgb(29, 28, 28);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.calculator form input{
-  border: 0;
-  outline: 0;
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
-  margin: 0.2em;
-  font-size: 1.5em;
- font-weight: 200;
-  color: white;
-  cursor: pointer;
-  background: rgba(66, 66, 70, 0.562);
-  box-shadow: 0px 0px 25px rgba(0, 0, 25, 0.5);
+  background: linear-gradient(135deg, rgb(219, 144, 5) 0%, rgb(220, 220, 226) 50%, rgba(127, 127, 134, 0.562) 100%);
   
 }
-.calculator form input:hover{
-  background: rgba(88, 88, 94, 0.562);
+.content-dp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
 }
-.calculator form input:active{
-  background: rgba(127, 127, 134, 0.562);
+.content-dp .image img{
+  width: 100%;
+}
+.image{
+  width: 100%;
+}
+.user-info{
+  width: 100%;
+  text-align: center;
+}
+.user-info p{
+  font-size: 20px;
+  margin-top: 1em;
+}
+.click-btn{
+  border: none;
+  width: 10em;
+  height: 2.5em;
+  background: black;
+  margin-top: 1.8em;
+  color: transparent;
+  border-radius: 2em;
+
+}
+.click-btn a{
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
 }
 
-form .display{
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 1em;
-  margin-top: 1.5em;
-  margin-bottom: 0.8em;
+.click-btn:hover{
+  background: rgb(56, 56, 56);
 }
-form .display input{
-  text-align: right;
-  flex: 1;
-  font-size: 45px;
-  box-shadow: none;
-  border-radius: 0;
-  background: none;
+.click-btn:active{
+  background: rgb(87, 87, 87);
 }
-form .display input:hover{
-background: none;
-}
-form .display input:active{
-  background: none;
-}
-.calculator form .zero{
-  width: 46%;
-  text-align: left;
-  padding-left: 1em;
-}
-.calculator form .operator{
-  background: rgb(219, 144, 5);
-}
-.calculator form .operator:hover{
-  background: rgb(223, 157, 34);
-}
-.calculator form .operator:active{
-  background: rgb(223, 168, 66);
-}
-.calculator form .highlight{
-  background-color: rgb(161, 156, 150);
-  color: black;
-}
-.calculator form .highlight:hover{
-  background-color: rgb(189, 183, 176);
-}
-.calculator form .highlight:active{
-  background-color: rgb(218, 211, 203);
+
+@media only screen and (max-width: 600px){
+  .container{
+    height: 100vh;
+  }
+  .content-dp{
+  width: 90%;
+flex-direction: column;
+    
+  }
+  .content-dp .image img{
+    width: 100%;
+  }
+
+
 }
