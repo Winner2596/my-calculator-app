@@ -85,3 +85,9 @@ form .display input:active{
 .calculator form .highlight:active{
   background-color: rgb(218, 211, 203);
 }
+
+@media only screen and (max-width: 768px){
+  .container{
+    height: 100vh;
+  }
+}
